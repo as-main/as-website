@@ -1621,7 +1621,6 @@ header .title-area:hover .logo-small-text span:nth-of-type(7) {
 	.genesis-nav-menu {
 		width: 1280px;
 		max-width: 100%;
-		padding: 0 15px;
 	}
 	.genesis-nav-menu > .menu-item:first-of-type {
 		margin-left: 0;
@@ -2163,6 +2162,56 @@ p.entry-meta {
 .footer-tracking-codes {
 	height: 0;
 	overflow: hidden;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: left;
+	line-height: 2;
+}
+.footer-content .mm-logo {
+	width: 120px;
+	vertical-align: middle;
+}
+.footer-content .copyright {
+	margin: 15px 0 0;
+}
+
+.footer-half {
+	flex: 1;
+	padding: 20px;
+}
+.social-links {
+	font-size: 0;
+	margin: 20px 0 0;
+}
+.social-links div {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+.social-links div a {
+	display: block;
+	height: 100%;
+}
+.social-links .twitter {
+	background: url(../workstation-pro/images/icon-twitter.svg) 0 no-repeat;
+	background-size: 100%;
+	margin-right: 15px;
+}
+.social-links .linkedin {
+	background: url(../workstation-pro/images/icon-linkedin.svg) 0 no-repeat;
+	background-size: 100%;
+}
+@media only screen and (max-width : 768px) {
+	.footer-content {
+		display: block;
+	}
+	.footer-half:first-of-type {
+		margin-bottom: 60px;
+	}
 }
 
 
@@ -2709,6 +2758,7 @@ p.entry-meta {
 
 
 
+
 /* Company page styles */
 .company-intro-content {
 	margin: 20px auto;	
@@ -2728,7 +2778,9 @@ p.entry-meta {
 	transform: translateY(-50%);
 }
 
-
+.page-company .page-title-desc .wrap {
+	padding: 20px 0;
+}
 
 
 
@@ -2831,26 +2883,15 @@ p.entry-meta {
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
-body.page-contact {
-	overflow: hidden;
-}
-
 body .title-area {
 	width: 170px;
-}
-body.page-contact,body.page-services .site-footer p,body.page-work .site-footer p,body.page-id-49 .site-footer p {
-	color: white;
-	font-family: 'Inconsolata', Monaco, monospace;
-}
-body.page-services h1,body.page-services h2 {
-	font-family: 'Inconsolata', Monaco, monospace;
-	font-weight: bold;
 }
 body .site-header {
 	background-color: black;
 }
 .page-title-desc .wrap {
-	max-width: 1280px;
+	padding: 20px;
+	text-align: left;
 }
 @media only screen and (max-width : 880px) {
 	body.page-contact {
@@ -2862,54 +2903,34 @@ body .site-header {
 }
 
 
+/* CONTACT PAGE */
 body.page-contact {
-/* 	background: url(http://activatorstudios.com/wp-content/themes/workstation-pro/images/bg-reno-overlay.jpg) center no-repeat; */
 	text-align: center;
 	min-height: 100vh;
 }
-body.page-contact .site-header,body.page-contact .site-footer {
-	background-color: transparent;
+body.page-contact .entry-title {
+	display: none;
 }
 body.page-contact .content {
 	background: none;
 	height: 50vh;
 }
-body.page-contact .one-half {
-	padding: 40px;
-	color: white;
+body.page-contact h2 {
+	text-align: left;
 }
 body.page-contact .one-half p {
 	margin: 0;
 }
-body.page-contact {
-	font-family: 'Inconsolata', Monaco, monospace;
-}
-body.page-contact h2,body.page-contact h1 {
-	font-family: 'Inconsolata', Monaco, monospace;
-	font-weight: bold;
-	color: white;
-}
 body.page-contact .entry {
-	margin: 100px auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 	max-width: 1140px;
 }
-body.page-contact .entry-content {
-
-}
-body.page-contact .site-footer {
-	display: none;
-}
-body.page-contact .genesis-nav-menu a {
-	color: white;
-}
 
 
 
-body.page-services {
-	background-color: black;
-	color: white;
-	font-family: 'Inconsolata', Monaco, monospace;
-}
+/* SERVICES PAGE */
 .service-items .wrap {
 	margin: auto;
 	max-width: none;
@@ -3059,19 +3080,7 @@ body.page-id-49 .service-item:hover:after {
 
 
 
-
-
-body.page-work {
-	background-color: black;
-	color: white;
-	font-family: 'Inconsolata', Monaco, monospace;
-}
-body.page-work .wrap {
-	margin: auto;
-	max-width: none;
-	padding: 0 20px;
-	position: relative;
-}
+/* OUR WORK PAGE */
 body.page-work h1,body.page-work h2 {
 	font-family: 'Inconsolata', Monaco, monospace;
 	font-weight: bold;
@@ -3299,14 +3308,8 @@ body.page-id-49 .work-item.work-focused-ec {
 }
 
 
-
 /* Sub-Services/Company page */
 
-body.page-sub-service {
-	background-color: black;
-	color: white;
-	font-family: 'Inconsolata', Monaco, monospace;
-}
 body.page-sub-service .title-area {
 	width: 170px;
 }
@@ -3600,3 +3603,7 @@ body.page-sub-service .one-half p {
 	font-family: helvetica, sans-serif;
 	font-size: .9em !important;
 }
+
+
+
+

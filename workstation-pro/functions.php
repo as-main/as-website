@@ -274,13 +274,31 @@ genesis_register_sidebar( array(
 
 
 
+// CUSTOM ACTIVATOR FUNCTIONS
 
 //* Customize the footer text (http://my.studiopress.com/snippets/footer/#custom-footer)
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 add_action( 'genesis_footer', 'sp_custom_footer' );
 function sp_custom_footer() {
-	echo '<p>&copy; Copyright ' .date('Y'). ' Activator Studios &middot; All Rights Reserved</p>';
-	//echo 'Makers of ' .get_template_directory().'/workstation-pro/images/logo-media-militia.png';
+	echo '<div class="footer-content">';
+	
+	echo '<div class="footer-half">';
+	echo '<h4>Contact / New Business</h4>';
+	echo 'T - <a href="tel:5402704137">540.270.4137</a><br>';
+	echo 'E - <a href="mailto:info@activatorstudios.com">info@activatorstudios.com</a>';
+	echo '
+	<div class="social-links">
+		<div class="social-link twitter"><a href="https://twitter.com/activatorstudio" target="_blank"></a></div>
+		<div class="social-link linkedin"><a href="https://www.linkedin.com/company/activator-studios" target="_blank"></a></div>
+	</div></div>';
+	
+	echo '<div class="footer-half">';
+	echo '<h4>More about us</h4>';
+	echo 'Makers of <a href="http://mediamilitia.com/" target="_blank"><img class="mm-logo" src="/wp-content/themes/workstation-pro/images/logo-media-militia-white.png" alt="Media Militia logo" /></a><br />	';
+	echo '<p class="copyright">&copy; Copyright ' .date('Y'). ' <br>Activator Studios &middot; All Rights Reserved</p>';
+	echo '</div>';
+	
+	echo '</div>';
 }
 
 

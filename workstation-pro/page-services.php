@@ -4,7 +4,7 @@
 	
 	<h1 class="page-title-desc">
 		<div class="wrap">
-			Services | <span>Digital Products That Inspire</span>
+			<h1>Our Services</h1><!--  | <span>Digital Products That Inspire --></span>
 		</div>
 	</h1>
 

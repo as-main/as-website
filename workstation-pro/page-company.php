@@ -22,7 +22,11 @@
 				
 			<? } else { ?>
 			
-				<h1><?php echo $pageTitle ?></h1>
+				<div class="page-title-desc">
+					<div class="wrap">
+						<h1><?php echo $pageTitle ?></h1>
+					</div>
+				</div>
 		
 				<h2><?php echo $pageSubTitle ?></h2>
 		

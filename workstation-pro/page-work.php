@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 
 
-<div class="wrap">
-	<h1 class="page-title-desc">Our Work | <span>Great work for great clients</span></h1>
+	<h1 class="page-title-desc">
+		<div class="wrap"><h1>Our Work</h1></div>
+	</h1>
 	
 	<?php
 		//get_template_part('part','header-cta');
 	?>
-</div>
+	
 	<?php
 	// check if the repeater field has rows of data
 	if( have_rows('work_items') ):
