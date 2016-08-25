@@ -1,7 +1,6 @@
 
-	var renderer, scene, camera, composer, circle, skelet, particle;
-	
-	var mouseX = 0, mouseY = 0;
+var renderer, scene, camera, composer, circle, skelet, particle;
+var mouseX = 0, mouseY = 0;
 
 window.onload = function() {
   init();
@@ -19,7 +18,7 @@ function init() {
   scene = new THREE.Scene();
 
   camera = new THREE.PerspectiveCamera(125, window.innerWidth / window.innerHeight, 1, 1000);
-  camera.position.z = 150;
+  camera.position.z = 180;
   scene.add(camera);
 
   circle = new THREE.Object3D();
@@ -63,7 +62,7 @@ function init() {
 	// object
 	var manager = new THREE.LoadingManager();
 		manager.onProgress = function ( item, loaded, total ) {
-		console.log( item, loaded, total );
+		//console.log( item, loaded, total );
 	};
 
 	var texture = new THREE.MeshBasicMaterial({
@@ -73,7 +72,7 @@ function init() {
 	var onProgress = function ( xhr ) {
 		if ( xhr.lengthComputable ) {
 			var percentComplete = xhr.loaded / xhr.total * 100;
-			console.log( Math.round(percentComplete, 2) + '% downloaded' );
+			//console.log( Math.round(percentComplete, 2) + '% downloaded' );
 		}
 	};
 	
@@ -82,11 +81,13 @@ function init() {
 	};
 
 
+/*
 	var loader = new THREE.ImageLoader( manager );
 	loader.load( '/wp-content/themes/workstation-pro/texture.jpg', function ( image ) {
 		//texture.image = image;
 		//texture.needsUpdate = true;
 	} );
+*/
 
 
 	var loader = new THREE.OBJLoader( manager );
